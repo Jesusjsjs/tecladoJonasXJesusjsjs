@@ -11,14 +11,16 @@ document.addEventListener("DOMContentLoaded", ()=>{
     leerButtonsNumbers('seven');
     leerButtonsNumbers('eight');
     leerButtonsNumbers('nine');
+    leerButtonsBorrar2('deleteAll');
+    leerButtonsBorrar1('deleteOne');
 })
-
-let result = "3"
+//Usaremos todas estas variables para nuestras functions siguientes.
+let result = ""
 const objectIdNumberValor = [
     '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 const objectIdNumbers = [
     'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
-
+let existePoint = false;
 
 //Function callback
 function leerButtonsNumbers( id ){//Esta function es para los Buttons Numbers
@@ -35,38 +37,53 @@ function leerButtonsNumbers( id ){//Esta function es para los Buttons Numbers
     return result;
 }
 function leerButtonPoint( id ){
-    let resultParaRevisar = result.split('');
     document.getElementById( id ).addEventListener('click', function(){
-        resultParaRevisar.forEach(element => {
-            console.log(resultParaRevisar)
-            existePoint = false;
-            if(element == "."){
-                existePoint = true;
-                result = result + ".";
-                document.getElementById( 'resultado' ).innerHTML = result;
-            }
-            else{
-                existePoint = existePoint;
-            }
-            
-            if(existePoint == true){
-                alert('No puedes poner dos: .')
-                console.log( existePoint )
-            }
-            else{
-                result = result + ".";
-                document.getElementById( 'resultado' ).innerHTML = result;
-            }
-
-        });
+        //Decidimos si sumar o no el . a nuestro resultado, en función si exite o no un punto.
+        console.log( existePoint )
+        if(existePoint == true){
+            alert('No puedes poner dos: .')
+        }
+        else{
+            result = result + ".";
+            document.getElementById( 'resultado' ).innerHTML = result;
+            console.log( existePoint )
+            return existePoint = true;
+        }
+        console.log( existePoint );
     }, true)
     return result;
 }
 function leerButtonsBorrar1( id ){
+    
+    document.getElementById( id ).addEventListener('click', function(){
+        lastStr = result.charAt( result.length-1 );
+        
+        if( lastStr == "." ){
+            console.log("hoola");
+            existePoint = false;
+            result = result.substring(0, result.length - 1);
+            document.getElementById( 'resultado' ).innerHTML = result;
+        }
+        else{
+            console.log("hii");
+            console.log(result[lastStr]);
+            result = result.substring(0, result.length - 1);
+            document.getElementById( 'resultado' ).innerHTML = result;
+        }
+        console.log( result.length );
+
+    })
+    return [result, existePoint];
 
 }
 function leerButtonsBorrar2( id ){
-
+    document.getElementById( id ).addEventListener('click', function(){
+        result = '';
+        existePoint = false;//Volvemos a signar false a existe point for can write points
+        document.getElementById( 'resultado' ).innerHTML = result;
+        console.log(result)
+    })
+    return result;
 }
 function aceptar( id ){
 
