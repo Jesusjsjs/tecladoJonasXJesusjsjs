@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+.buttonNumber{
+    width: 80px;
+    height: 80px;
+}
+button{
+    width: 90px;
+    height: 90px;
+}
+.cerobutton{
+    width: 180px;
+    height: 90px;
+}
+#resultado{
+    font-size: 3rem;
+    width: 360px;
+    display: flex;
+    justify-content: end;
+}
