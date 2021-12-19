@@ -27,10 +27,8 @@ function leerButtonsNumbers( id ){//Esta function es para los Buttons Numbers
     let buttonId = document.getElementById( id );
     let indiceName = objectIdNumbers.indexOf( id );//Conseguimos la position del id para después usarlo y localizar su valor en objectIdNumberValor
     let valorMore = objectIdNumberValor[ indiceName ];//Conseguimos el valor
-    console.log( valorMore );//Para pruebas xc
 
     buttonId.addEventListener( "click", function(){
-        console.log(result);
             result = result + valorMore;//Sumamos el valor al principio.
             document.getElementById( 'resultado' ).innerHTML = result;//Actualizamos la pantalla con un nuevo valor jsjs
     }, true)                  
@@ -39,17 +37,14 @@ function leerButtonsNumbers( id ){//Esta function es para los Buttons Numbers
 function leerButtonPoint( id ){
     document.getElementById( id ).addEventListener('click', function(){
         //Decidimos si sumar o no el . a nuestro resultado, en función si exite o no un punto.
-        console.log( existePoint )
         if(existePoint == true){
             alert('No puedes poner dos: .')
         }
         else{
             result = result + ".";
             document.getElementById( 'resultado' ).innerHTML = result;
-            console.log( existePoint )
             return existePoint = true;
-        }
-        console.log( existePoint );
+        } 
     }, true)
     return result;
 }
@@ -58,19 +53,15 @@ function leerButtonsBorrar1( id ){
     document.getElementById( id ).addEventListener('click', function(){
         lastStr = result.charAt( result.length-1 );
         
-        if( lastStr == "." ){
-            console.log("hoola");
+        if( lastStr == "." ){ 
             existePoint = false;
             result = result.substring(0, result.length - 1);
             document.getElementById( 'resultado' ).innerHTML = result;
         }
         else{
-            console.log("hii");
-            console.log(result[lastStr]);
             result = result.substring(0, result.length - 1);
             document.getElementById( 'resultado' ).innerHTML = result;
-        }
-        console.log( result.length );
+        }        
 
     })
     return [result, existePoint];
@@ -81,7 +72,6 @@ function leerButtonsBorrar2( id ){
         result = '';
         existePoint = false;//Volvemos a signar false a existe point for can write points
         document.getElementById( 'resultado' ).innerHTML = result;
-        console.log(result)
     })
     return result;
 }
