@@ -83,7 +83,8 @@ function aceptarCantidad( id ){
     document.getElementById( id ).addEventListener('click', function(){
         paraTransferir = result;
         document.getElementById( 'paraDepositar' ).innerHTML= paraTransferir;
-        console.log();
+        document.getElementById( 'machineNumbers' ).style.display = "none";
+        document.getElementById( "forDepositar" ).style.display = "flex";
     })
     return paraTransferir
 }
@@ -97,6 +98,5 @@ function depositar( id ){
     document.getElementById( id ).addEventListener("click", function(){
         document.getElementById( 'machineNumbers' ).style.display = "flex";
         document.getElementById( "forDepositar" ).style.display = "none";
-
     })
 }

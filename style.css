@@ -50,10 +50,10 @@ button:hover{
     color: white;
 }
 #machineNumbers{
-    margin-top: 90px;
+    margin-top: 10px;
     display: none ;
     justify-content: center ;
-    position: static;
+    position: relative;
 }
 #tecladoo{
     padding: 10px;
@@ -61,22 +61,40 @@ button:hover{
     border-radius: 5px;
 }
 #teclado:hover{
-    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    box-shadow: 0px 0px 2px rgb(56, 56, 56);
 }
 #forDepositar{
     display: flex;
     justify-content: center;
 }
 #depositarMore{
-    width: 290px;
+    width: 260px;
     border-radius: 15px;
     background-color: #fffac6;
     color: #333333;
     font-weight: 600;
     height: 60px;
-    margin-top: 300px;
+    margin-top: 10px;
 }
 #depositarMore:hover{
     background-color: rgb(247, 236, 111);
 
+}
+#padreParaDepositar{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+#paraDepositar{
+    width: 290px;
+    height: 60px;
+    background-color: #fffac6;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
 }
