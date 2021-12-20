@@ -34,10 +34,10 @@ button:hover{
     width: 188px;
     height: 90px;
     border-radius: 10px;
-    background-color: #feea00;
+    background-color: #fecb00;
 }
 #zero:hover{
-    background-color: #e8d400;
+    background-color: rgb(240, 224, 43);
 }
 #resultado{
     font-size: 3rem;
@@ -83,12 +83,12 @@ button:hover{
 #padreParaDepositar{
     display: flex;
     justify-content: center;
-    margin-top: 150px;
+    margin-top: 5px;
 }
 #paraDepositar{
     width: 290px;
     height: 60px;
-    background-color: #fffac6;
+    background-color: #fdf0b5;
     border-radius: 15px;
     text-align: center;
     display: flex;
@@ -97,4 +97,25 @@ button:hover{
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
+}
+#bienvenidos{
+    font-size: 2.8rem;
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 60px;
+}
+#eslogan{
+    font-size: 2rem;
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: 300;
+}
+.info{
+    text-align: center;
+    font-size: 2rem;    
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif; 
+    margin-top: 100px;
 }

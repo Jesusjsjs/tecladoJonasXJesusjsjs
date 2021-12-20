@@ -93,6 +93,7 @@ function cancelar( id ){
     document.getElementById( id ).addEventListener("click", function(){
         document.getElementById( 'machineNumbers' ).style.display = "none";
         document.getElementById( 'forDepositar' ).style.display = "flex";//Ocultamos y mostramos las ventanas que necesitamos.
+
     })
 }
 function depositar( id ){
@@ -101,4 +102,5 @@ function depositar( id ){
         document.getElementById( "forDepositar" ).style.display = "none";
     })
 }
+
 
