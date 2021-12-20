@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
     leerButtonsBorrar1('deleteOne');
     aceptarCantidad('aceptar');
     cancelar('cancelar');
-    depositar('depositarMore')
+    depositar('depositarMore');
+
 })
 //Usaremos todas estas variables para nuestras functions siguientes.
 let result = ""
@@ -81,7 +82,7 @@ function leerButtonsBorrar2( id ){
 }
 function aceptarCantidad( id ){
     document.getElementById( id ).addEventListener('click', function(){
-        paraTransferir = result;
+        paraTransferir = "$" + result;
         document.getElementById( 'paraDepositar' ).innerHTML= paraTransferir;
         document.getElementById( 'machineNumbers' ).style.display = "none";
         document.getElementById( "forDepositar" ).style.display = "flex";
@@ -91,7 +92,7 @@ function aceptarCantidad( id ){
 function cancelar( id ){
     document.getElementById( id ).addEventListener("click", function(){
         document.getElementById( 'machineNumbers' ).style.display = "none";
-        document.getElementById( 'forDepositar' ).style.display = "flex";
+        document.getElementById( 'forDepositar' ).style.display = "flex";//Ocultamos y mostramos las ventanas que necesitamos.
     })
 }
 function depositar( id ){
@@ -100,3 +101,4 @@ function depositar( id ){
         document.getElementById( "forDepositar" ).style.display = "none";
     })
 }
+
