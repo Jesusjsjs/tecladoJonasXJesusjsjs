@@ -13,9 +13,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
     leerButtonsNumbers('nine');
     leerButtonsBorrar2('deleteAll');
     leerButtonsBorrar1('deleteOne');
+    aceptarCantidad('aceptar');
+    cancelar('cancelar');
+    depositar('depositarMore')
 })
 //Usaremos todas estas variables para nuestras functions siguientes.
 let result = ""
+let paraTransferir = 0;
 const objectIdNumberValor = [
     '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 const objectIdNumbers = [
@@ -75,10 +79,24 @@ function leerButtonsBorrar2( id ){
     })
     return result;
 }
-function aceptar( id ){
-
+function aceptarCantidad( id ){
+    document.getElementById( id ).addEventListener('click', function(){
+        paraTransferir = result;
+        document.getElementById( 'paraDepositar' ).innerHTML= paraTransferir;
+        console.log();
+    })
+    return paraTransferir
 }
 function cancelar( id ){
-
+    document.getElementById( id ).addEventListener("click", function(){
+        document.getElementById( 'machineNumbers' ).style.display = "none";
+        document.getElementById( 'forDepositar' ).style.display = "flex";
+    })
 }
+function depositar( id ){
+    document.getElementById( id ).addEventListener("click", function(){
+        document.getElementById( 'machineNumbers' ).style.display = "flex";
+        document.getElementById( "forDepositar" ).style.display = "none";
 
+    })
+}
